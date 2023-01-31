@@ -21,3 +21,4 @@ ports:
   50008/udp: 50008
   50009/udp: 50009
   50010/udp: 50010
+image: ljsquare/ispy_agent_dvr
