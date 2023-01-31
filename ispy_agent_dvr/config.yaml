@@ -1,5 +1,5 @@
 name: "ISpy Agent dvr"
-version: 0.1
+version: 0.2
 slug: ispy_agent_dvr
 description: "iSpy is the world’s most popular open source video surveillance application. It's compatible with the the vast majority of consumer webcams and IP cameras."
 arch:
@@ -7,8 +7,6 @@ arch:
 map:
   - share:rw
 url: "https://www.ispyconnect.com/"
-ingress: true
-ingress_port: 8090
 ports:
   8090/tcp: 8090
   3478/udp: 3478
