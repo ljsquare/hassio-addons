@@ -1,9 +1,0 @@
-ARG BUILD_FROM
-FROM $BUILD_FROM
-
-ARG TZ=Europe/Amsterdam
-
-RUN apk add unzip alsa-utils
-
-ADD https://ispyfiles.azureedge.net/downloads/Agent_Linux64_4_4_6_0.zip /agent
-RUN unzip /agent/agent.zip -d /agent && rm /agent/agent.zip
