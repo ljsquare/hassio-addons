@@ -1,16 +1,22 @@
-ARG BUILD_FROM
-FROM $BUILD_FROM
+FROM homeassistant/amd64-base-ubuntu:latest
 
 ARG TZ=Europe/Amsterdam
 
-RUN apk add unzip alsa-utils libgdiplus ffmpeg
+RUN apt-get update \
+    && apt-get install -y unzip software-properties-common alsa-utils libgdiplus tzdata curl
+
+RUN add-apt-repository -y ppa:savoury1/ffmpeg4 && \
+	add-apt-repository -y ppa:savoury1/ffmpeg5 && \
+	apt-get update && \
+	apt-get upgrade -y && \
+	apt-get install -y ffmpeg
 
 # Data volumes
 VOLUME ["/data","/data/Media/XML", "/data/Media/WebServerRoot/Media", "/data/Commands"]
 
 WORKDIR /data
 
-ADD https://ispyfiles.azureedge.net/downloads/Agent_Linux64_4_4_6_0.zip /
+ADD https://ispyfiles.azureedge.net/downloads/Agent_Linux64_4_4_6_0.zip .
 RUN unzip Agent_Linux64_4_4_6_0.zip  && rm Agent_Linux64_4_4_6_0.zip
 
 RUN chmod +x Agent && \
