@@ -8,14 +8,15 @@ RUN apk add unzip alsa-utils libgdiplus ffmpeg
 # Data volumes
 VOLUME ["/data","/data/Media/XML", "/data/Media/WebServerRoot/Media", "/data/Commands"]
 
+WORKDIR /data
 
-ADD https://ispyfiles.azureedge.net/downloads/Agent_Linux64_4_4_6_0.zip /data/
-RUN unzip /data/Agent_Linux64_4_4_6_0.zip -d /data && rm /data/Agent_Linux64_4_4_6_0.zip
+ADD https://ispyfiles.azureedge.net/downloads/Agent_Linux64_4_4_6_0.zip /
+RUN unzip Agent_Linux64_4_4_6_0.zip  && rm Agent_Linux64_4_4_6_0.zip
 
-RUN chmod +x /data/Agent && \
-  chmod +x /data/agent-register.sh && \
-  chmod +x /data/agent-reset.sh && \
-  chmod +x /data/agent-reset-local-login.sh
+RUN chmod +x Agent && \
+  chmod +x agent-register.sh && \
+  chmod +x agent-reset.sh && \
+  chmod +x agent-reset-local-login.sh
 
 # Define default environment variables
 ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
