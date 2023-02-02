@@ -1,10 +1,14 @@
 #!/bin/bash
 cd /agent
-if [ -d /data/XML ]
+if [! -d /data/Media ]
 then
-  rm -rf XML
-else
-  mv XML /data/
+  mkdir /data/Media
 fi
-ln -s /data/XML XML
+if [! -d /data/Commands ]
+then
+  mkdir /data/Commands
+fi
+
+ln -s /data/Media Media
+ln -s /data/Commands Commands
 ./Agent
