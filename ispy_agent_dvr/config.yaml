@@ -1,6 +1,6 @@
-name: "ISpy Agent dvr local"
+name: "ISpy Agent dvr"
 version: 0.3
-slug: ispy_agent_dvr_local
+slug: ispy_agent_dvr
 description: "iSpy is the world’s most popular open source video surveillance application. It's compatible with the the vast majority of consumer webcams and IP cameras."
 arch:
   - amd64
