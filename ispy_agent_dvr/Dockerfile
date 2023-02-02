@@ -1,5 +1,3 @@
-ARG BUILD_FROM
-#FROM $BUILD_FROM
 FROM homeassistant/amd64-base-debian:latest
 
 ARG TZ=Europe/Amsterdam

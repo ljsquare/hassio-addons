@@ -6,7 +6,6 @@ arch:
   - amd64
 map:
   - share:rw
-  - agent:rw
 url: "https://www.ispyconnect.com/"
 ports:
   8090/tcp: 8090
