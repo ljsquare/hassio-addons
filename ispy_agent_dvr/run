@@ -1,0 +1,10 @@
+#!/bin/bash
+cd /agent
+if [ -d /data/XML ]
+then
+  rm -rf XML
+else
+  mv XML /data/
+fi
+ln -s /data/XML XML
+./Agent
