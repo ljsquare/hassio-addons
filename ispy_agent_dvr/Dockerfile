@@ -9,11 +9,13 @@ RUN apt update && apt install -y unzip alsa-utils libgdiplus ffmpeg
 
 ADD https://ispyfiles.azureedge.net/downloads/Agent_Linux64_4_4_6_0.zip /agent/
 RUN unzip /agent/Agent_Linux64_4_4_6_0.zip -d /agent && rm /agent/Agent_Linux64_4_4_6_0.zip
+COPY run /agent/
 
 RUN chmod +x /agent/Agent && \
   chmod +x /agent/agent-register.sh && \
   chmod +x /agent/agent-reset.sh && \
-  chmod +x /agent/agent-reset-local-login.sh
+  chmod +x /agent/agent-reset-local-login.sh && \
+  chmod +x /agent/run
 
 # Define default environment variables
 ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
@@ -31,7 +33,7 @@ EXPOSE 50000-50010/udp
 
 ENTRYPOINT [ "/init" ]
 # Define service entrypoint
-CMD ["/agent/Agent"]
+CMD ["/agent/run"]
 
 LABEL \
   io.hass.version="VERSION" \
