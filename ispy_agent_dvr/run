@@ -1,10 +1,10 @@
 #!/bin/bash
 cd /agent
-if [! -d /data/Media ]
+if [ ! -d "/data/Media" ]
 then
   mkdir /data/Media
 fi
-if [! -d /data/Commands ]
+if [ ! -d "/data/Commands" ]
 then
   mkdir /data/Commands
 fi
