@@ -2,7 +2,9 @@ FROM homeassistant/amd64-base-debian:latest
 
 ARG TZ=Europe/Amsterdam
 
-RUN apt update && apt install -y unzip alsa-utils libgdiplus ffmpeg
+RUN  echo 'deb http://http.us.debian.org/debian testing main non-free contrib' >> /etc/apt/sources.list &&\
+    apt update &&\
+    apt install -y unzip alsa-utils libgdiplus ffmpeg
 
 # Data volumes
 #VOLUME ["/agent","/agent/Media/XML", "/agent/Media/WebServerRoot/Media", "/agent/Commands"]
