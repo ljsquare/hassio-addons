@@ -22,4 +22,4 @@ ports:
   50009/udp: 50009
   50010/udp: 50010
 image: ljsquare/ispy_agent_dvr
-init:false
+init: false
