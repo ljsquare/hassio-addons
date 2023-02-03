@@ -4,13 +4,15 @@ ARG TZ=Europe/Amsterdam
 
 RUN  echo 'deb http://http.us.debian.org/debian testing main non-free contrib' >> /etc/apt/sources.list &&\
     apt update &&\
-    apt install -y unzip alsa-utils libgdiplus ffmpeg
+    apt install -y unzip alsa-utils libgdiplus ffmpeg wget
 
-# Data volumes
-#VOLUME ["/agent","/agent/Media/XML", "/agent/Media/WebServerRoot/Media", "/agent/Commands"]
+VOLUME ["/data"]
 
 ADD https://ispyfiles.azureedge.net/downloads/Agent_Linux64_4_4_6_0.zip /agent/
-RUN unzip /agent/Agent_Linux64_4_4_6_0.zip -d /agent && rm /agent/Agent_Linux64_4_4_6_0.zip
+RUN wget -c $(wget -qO- "https://www.ispyconnect.com/api/Agent/DownloadLocation4?platform=Linux64&fromVersion=0" | tr -d '"') -O agent.zip; \
+    unzip agent.zip -d /agent && \
+    rm agent.zip
+
 COPY run /agent/
 
 RUN chmod +x /agent/Agent && \
