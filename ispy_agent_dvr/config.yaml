@@ -1,5 +1,5 @@
-name: "ISpy Agent dvr"
-version: 0.5
+name: "ISpy Agent DVR"
+version: 0.6
 slug: ispy_agent_dvr
 description: "iSpy is the world’s most popular open source video surveillance application. It's compatible with the the vast majority of consumer webcams and IP cameras."
 arch:
@@ -23,3 +23,5 @@ ports:
   50010/udp: 50010
 image: ljsquare/ispy_agent_dvr
 init: false
+webui: http://[HOST]:[PORT:8090]
+watchdog: http://[HOST]:[PORT:8090]
