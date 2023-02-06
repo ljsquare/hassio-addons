@@ -1,5 +1,5 @@
 name: "ISpy Agent DVR"
-version: 0.6
+version: 0.7
 slug: ispy_agent_dvr
 description: "iSpy is the world’s most popular open source video surveillance application. It's compatible with the the vast majority of consumer webcams and IP cameras."
 arch:
