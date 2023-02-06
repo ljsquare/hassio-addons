@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 # #!/usr/bin/env bashio
 
 #FOLDER=$(bashio::config 'folder')
