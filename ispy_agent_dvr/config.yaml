@@ -1,6 +1,7 @@
-name: "ISpy Agent DVR"
-version: 0.7
+name: "iSpy Agent DVR"
+version: 0.8
 slug: ispy_agent_dvr
+apparmor: true
 description: "iSpy is the world’s most popular open source video surveillance application. It's compatible with the the vast majority of consumer webcams and IP cameras."
 arch:
   - amd64
@@ -26,24 +27,23 @@ init: false
 webui: http://[HOST]:[PORT:8090]
 watchdog: http://[HOST]:[PORT:8090]
 ports_description:
-  8090/tcp: "Default port, can't be changed"
-  3478/udp: "Default port, can't be changed"
-  50000/udp: "Default port, can't be changed"
-  50001/udp: "Default port, can't be changed"
-  50002/udp: "Default port, can't be changed"
-  50003/udp: "Default port, can't be changed"
-  50004/udp: "Default port, can't be changed"
-  50005/udp: "Default port, can't be changed"
-  50006/udp: "Default port, can't be changed"
-  50007/udp: "Default port, can't be changed"
-  50008/udp: "Default port, can't be changed"
-  50009/udp: "Default port, can't be changed"
-  50010/udp: "Default port, can't be changed"
+  8090/tcp: "Default port, don't change"
+  3478/udp: "Default port, don't change"
+  50000/udp: "Default port, don't change"
+  50001/udp: "Default port, don't change"
+  50002/udp: "Default port, don't change"
+  50003/udp: "Default port, don't change"
+  50004/udp: "Default port, don't change"
+  50005/udp: "Default port, don't change"
+  50006/udp: "Default port, don't change"
+  50007/udp: "Default port, don't change"
+  50008/udp: "Default port, don't change"
+  50009/udp: "Default port, don't change"
+  50010/udp: "Default port, don't change"
 video: true
 usb: true
 options:
-  location: ispy
+  folder: ispy
 schema:
-  location: str
-  test: int?
+  folder: str
 backup: cold
