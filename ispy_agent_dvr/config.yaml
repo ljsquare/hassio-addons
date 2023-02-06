@@ -25,3 +25,25 @@ image: ljsquare/ispy_agent_dvr
 init: false
 webui: http://[HOST]:[PORT:8090]
 watchdog: http://[HOST]:[PORT:8090]
+ports_description:
+  8090/tcp: "Default port, can't be changed"
+  3478/udp: "Default port, can't be changed"
+  50000/udp: "Default port, can't be changed"
+  50001/udp: "Default port, can't be changed"
+  50002/udp: "Default port, can't be changed"
+  50003/udp: "Default port, can't be changed"
+  50004/udp: "Default port, can't be changed"
+  50005/udp: "Default port, can't be changed"
+  50006/udp: "Default port, can't be changed"
+  50007/udp: "Default port, can't be changed"
+  50008/udp: "Default port, can't be changed"
+  50009/udp: "Default port, can't be changed"
+  50010/udp: "Default port, can't be changed"
+video: true
+usb: true
+options:
+  location: ispy
+schema:
+  location: str
+  test: int?
+backup: cold
