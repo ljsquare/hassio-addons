@@ -1,6 +1,7 @@
-#!/usr/bin/env bashio
+#!/usr/bin/bash
+# #!/usr/bin/env bashio
 
-FOLDER=$(bashio::config 'folder')
+#FOLDER=$(bashio::config 'folder')
 
 cd /agent
 if [ ! -d "/data/Media" ]
@@ -12,11 +13,13 @@ then
   mkdir /data/Commands
 fi
 
-if [ ! -d "/share/${folder}"]
-then
-  mkdir /share/${folder}
-fi
+#if [ ! -d "/share/${folder}"]
+#then
+#  mkdir /share/${folder}
+#fi
+
 ln -s /data/Media Media
 ln -s /data/Commands Commands
-ln -s /share/${folder} Media/WebServerRoot/Media
+#ln -s /share/${folder} Media/WebServerRoot/Media
+
 ./Agent
