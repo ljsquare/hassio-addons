@@ -1,0 +1,19 @@
+configuration:
+  folder:
+    name: map
+    description: "Zet de standaard map in de gedeelde map 'share'"
+
+network:
+  8090/tcp: "Standaard poort, niet veranderen"
+  3478/udp: "Standaard poort, niet veranderen"
+  50000/udp: "Standaard poort, niet veranderen"
+  50001/udp: "Standaard poort, niet veranderen"
+  50002/udp: "Standaard poort, niet veranderen"
+  50003/udp: "Standaard poort, niet veranderen"
+  50004/udp: "Standaard poort, niet veranderen"
+  50005/udp: "Standaard poort, niet veranderen"
+  50006/udp: "Standaard poort, niet veranderen"
+  50007/udp: "Standaard poort, niet veranderen"
+  50008/udp: "Standaard poort, niet veranderen"
+  50009/udp: "Standaard poort, niet veranderen"
+  50010/udp: "Standaard poort, niet veranderen"

@@ -1,0 +1,4 @@
+configuration:
+  folder:
+    name: folder
+    description: "Set the foldername in the sharefolder 'share'"
