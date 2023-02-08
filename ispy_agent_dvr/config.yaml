@@ -1,5 +1,5 @@
 name: "iSpy Agent DVR"
-version: 0.8
+version: 0.9
 slug: ispy_agent_dvr
 apparmor: true
 description: "iSpy is the world’s most popular open source video surveillance application. It's compatible with the the vast majority of consumer webcams and IP cameras."
@@ -43,7 +43,10 @@ ports_description:
 video: true
 usb: true
 options:
+  override: false
   folder: ispy
 schema:
+  override: bool
   folder: str
 backup: cold
+hassio_api: true
