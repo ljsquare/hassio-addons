@@ -35,8 +35,7 @@ EXPOSE 3478/udp
 # TURN server UDP port range
 EXPOSE 50000-50010/udp
 
-ENTRYPOINT [ "/init" ]
-# Define service entrypoint
+
 CMD ["/agent/run"]
 
 LABEL \
