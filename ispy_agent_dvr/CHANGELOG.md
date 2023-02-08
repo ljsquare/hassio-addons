@@ -1,4 +1,6 @@
 # Changelog
+## 0.9
+- override for default folder
 ## 0.8
 - add configuration options
 - add translations
