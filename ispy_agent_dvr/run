@@ -1,5 +1,6 @@
 #!/usr/bin/with-contenv bashio
 
+
 Folder="$(bashio::config 'folder')"
 
 cd /agent
