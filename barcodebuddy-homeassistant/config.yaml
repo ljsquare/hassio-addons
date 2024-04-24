@@ -24,7 +24,7 @@ ports_description:
   80/tcp: Web interface
 options:
   attach_barcodescanner: false
-  device: /dev/null
+  device: /dev/input/event0
   curl_allow_insecure_ssl_ca: false
   curl_allow_insecure_ssl_host: false
 schema:
