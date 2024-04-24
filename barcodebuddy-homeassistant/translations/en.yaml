@@ -1,0 +1,6 @@
+configuration:
+  attach_barcodescanner:
+    name: Attach a barcode scanner
+  device:
+    name: Port which barcode scanner is attached to
+    
