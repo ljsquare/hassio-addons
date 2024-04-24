@@ -1,9 +1,9 @@
 ---
-name: Barcode Buddy for Grocy Testing
+name: Barcode Buddy for Grocy
 version: 1.0
 slug: bbuddy-grocy
-description: Barcode system for Grocy Testing
-url: https://github.com/ljsquare/barcodebuddy-homeassistant
+description: Barcode system for Grocy
+url: https://github.com/ljsquare/hassio/barcodebuddy-homeassistant
 webui: http://[HOST]:[PORT:80]
 panel_icon: mdi:barcode-scan
 startup: system
