@@ -14,13 +14,13 @@
 [i386-shield]: https://img.shields.io/badge/i386-yes-green.svg
 
 
-This is the docker repo optimized for Home Assistant of [BarcodeBuddy](https://github.com/Forceu/barcodebuddy), forked by LJ for testing.
+This a fork of the docker repo optimized for Home Assistant of [BarcodeBuddy](https://github.com/Forceu/barcodebuddy).
 
 ### Install Home Assistant
 
 ![](images/add-repo-url.png?raw=true)
 1. Click context menu in addon section
-2. Add custom repo url and point to this repo https://github.com/ljsquare/barcodebuddy-homeassistant
+2. Add custom repo url and point to this repo https://github.com/ljsquare/hassio-addons/barcodebuddy-homeassistant
 
 
 
