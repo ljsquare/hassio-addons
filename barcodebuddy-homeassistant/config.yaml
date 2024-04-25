@@ -18,7 +18,6 @@ init: false
 map:
   - config:rw
   - ssl
-  - addon_config:rw
 ports:
   80/tcp: 8621
 ports_description:
