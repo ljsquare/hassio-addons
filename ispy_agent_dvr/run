@@ -23,11 +23,8 @@ then
   then
     mkdir /share/${Folder}
   fi
-  if ! bashio::fs.directory_exists "Media/WebServerRoot/Media";
-  then
-    mkdir -p Media/WebServerRoot/Media
-  fi
-  ln -s /share/${Folder} Media/WebServerRoot/Media
+
+  ln -sf /share/${Folder} Media/WebServerRoot/Media
 fi
 
 ./Agent
