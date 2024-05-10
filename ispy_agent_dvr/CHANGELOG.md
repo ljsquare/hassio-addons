@@ -1,4 +1,6 @@
 # Changelog
+## 0.92
+- Bugfix
 ## 0.91
 - Bugfix
 ## 0.9
