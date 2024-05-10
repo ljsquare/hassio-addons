@@ -1,4 +1,6 @@
 # Changelog
+## 0.93
+- Solved [issue4](https://github.com/ljsquare/hassio-addons/issues/4)
 ## 0.92
 - Bugfix
 ## 0.91
