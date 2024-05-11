@@ -6,7 +6,7 @@ export APP_KEY=$(bashio::config 'APP_KEY')
 export DB_CONNECTION="mysql"
 export DB_PORT=$(bashio::services "mysql" "port")
 export DB_USERNAME=$(bashio::services "mysql" "username")
-export DB_PASSWORD=$(bbashio::services "mysql" "password")
+export DB_PASSWORD=$(bashio::services "mysql" "password")
 
 export DB_DATABASE=$(\
     mysql \
