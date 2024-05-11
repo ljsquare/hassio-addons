@@ -19,7 +19,7 @@ options:
 schema:
   APP_KEY: str(32,32)
   DB_HOST: str
-  DB_CONNECTION: list(mysql,pqsql)
+  DB_CONNECTION: list(mysql|pqsql)
   DB_PORT: int(3000,)
   DB_DATABASE: str
   DB_USERNAME: str
