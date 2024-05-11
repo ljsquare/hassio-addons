@@ -21,7 +21,7 @@ if ! bashio::var.has_value "${DB_DATABASE}"; then
     mysql \
         -u "${DB_USERNAME}" -p"${DB_PASSWORD}" \
         -h "${DB_HOST}" -P "${DB_PORT}" \
-            CREATE DATABASE IF NOT EXISTS `firefly`
+            --execute="CREATE DATABASE IF NOT EXISTS 'firefly'"
 fi
 
 
