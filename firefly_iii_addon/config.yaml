@@ -26,3 +26,4 @@ schema:
   #DB_PASSWORD: password
 services:
   - mysql:need
+hassio_api: true
