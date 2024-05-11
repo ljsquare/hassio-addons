@@ -27,7 +27,7 @@ schema:
   DB_TYPE: 
     - DB_CONNECTION: str
     - DB_PORT: int(3000,)
-    - DB_CONNECTION: pgsql
+    - DB_CONNECTION: str
     - DB_PORT: int(3000,)
   DB_DATABASE: str
   DB_USERNAME: str
