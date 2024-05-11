@@ -17,10 +17,10 @@ options:
   DB_USERNAME: firelfy
   DB_PASSWORD: firefly
 schema:
-  APP_KEY: str(32,32)
+  APP_KEY: str
   DB_HOST: str
   DB_CONNECTION: list(mysql|pqsql)
-  DB_PORT: int(3000,)
+  DB_PORT: int
   DB_DATABASE: str
   DB_USERNAME: str
   DB_PASSWORD: password
