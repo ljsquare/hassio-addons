@@ -11,6 +11,7 @@ ARG TEMPIO_VERSION="2021.09.0"
 RUN \
     set -x \
     && apt-get update && apt-get install -y --no-install-recommends \
+        mariadb-client=10.11.6-r0 \
         bash \
         jq \
         tzdata \
