@@ -1,0 +1,7 @@
+build_from:
+  amd64: fireflyiii/core:latest
+
+args:
+  BASHIO_VERSION: 0.16.2
+  TEMPIO_VERSION: 2021.09.0
+ 

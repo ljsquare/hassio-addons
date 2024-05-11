@@ -1,0 +1,35 @@
+name: "Firefly III"
+version: 0.1
+slug: firefly_iii
+description: "Nog geen beschrijving"
+arch:
+  - amd64
+ports:
+  80/tcp: 9080
+ports_description:
+  80/tcp: Web interface
+options:
+  APP_KEY: CHANGEME_32_CHARS
+  DB_HOST: localhost
+  #DB_PORT: 3306
+  DB_TYPE: 
+    - DB_CONNECTION: mysql
+    - DB_PORT: 3306
+    - DB_CONNECTION: pgsql
+    - DB_PORT: 5432
+  DB_DATABASE: firefly
+  DB_USERNAME: firelfy
+  DB_PASSWORD: firefly
+schema:
+  APP_KEY: str(32,32)
+  DB_HOST: str
+  #DB_PORT: int(3000,)
+  DB_TYPE: 
+    - DB_CONNECTION: str
+    - DB_PORT: int(3000,)
+    - DB_CONNECTION: pgsql
+    - DB_PORT: int(3000,)
+  DB_DATABASE: str
+  DB_USERNAME: str
+  DB_PASSWORD: password
+
