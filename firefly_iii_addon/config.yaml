@@ -11,24 +11,16 @@ ports_description:
 options:
   APP_KEY: CHANGEME_32_CHARS
   DB_HOST: localhost
-  #DB_PORT: 3306
-  DB_TYPE: 
-    - DB_CONNECTION: mysql
-    - DB_PORT: 3306
-    - DB_CONNECTION: pgsql
-    - DB_PORT: 5432
+  DB_CONNECTION: mysql
+  DB_PORT: 3306
   DB_DATABASE: firefly
   DB_USERNAME: firelfy
   DB_PASSWORD: firefly
 schema:
   APP_KEY: str(32,32)
   DB_HOST: str
-  #DB_PORT: int(3000,)
-  DB_TYPE: 
-    - DB_CONNECTION: str
-    - DB_PORT: int(3000,)
-    - DB_CONNECTION: str
-    - DB_PORT: int(3000,)
+  DB_CONNECTION: list(mysql,pqsql)
+  DB_PORT: int(3000,)
   DB_DATABASE: str
   DB_USERNAME: str
   DB_PASSWORD: password
