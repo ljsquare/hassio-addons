@@ -25,4 +25,4 @@ schema:
   DB_USERNAME: str
   DB_PASSWORD: password
 services:
-  - mysql: needed
+  - mysql: need
