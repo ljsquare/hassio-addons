@@ -1,5 +1,5 @@
 name: "Firefly III"
-version: 0.11
+version: 0.12
 slug: firefly_iii
 description: "Nog geen beschrijving"
 arch:
@@ -10,19 +10,19 @@ ports_description:
   80/tcp: Web interface
 options:
   APP_KEY: CHANGEME_32_CHARS
-  DB_HOST: localhost
-  DB_CONNECTION: mysql
-  DB_PORT: 3306
-  DB_DATABASE: firefly
-  DB_USERNAME: firelfy
-  DB_PASSWORD: firefly
+  #DB_HOST: localhost
+  #DB_CONNECTION: mysql
+  #DB_PORT: 3306
+  #DB_DATABASE: firefly
+  #DB_USERNAME: firelfy
+  #DB_PASSWORD: firefly
 schema:
   APP_KEY: str
-  DB_HOST: str
-  DB_CONNECTION: list(mysql|pqsql)
-  DB_PORT: int
-  DB_DATABASE: str
-  DB_USERNAME: str
-  DB_PASSWORD: password
+  #DB_HOST: str
+  #DB_CONNECTION: list(mysql|pqsql)
+  #DB_PORT: int
+  #DB_DATABASE: str
+  #DB_USERNAME: str
+  #DB_PASSWORD: password
 services:
   - mysql:need
