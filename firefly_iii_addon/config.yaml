@@ -10,7 +10,7 @@ ports:
 ports_description:
   80/tcp: Web interface
 map:
-  -share: rw
+  - share: rw
 options:
   APP_KEY: CHANGEME_32_CHARS
   DEFAULT_LANGUAGE: nl_NL
