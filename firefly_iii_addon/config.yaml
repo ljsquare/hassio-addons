@@ -1,5 +1,5 @@
 name: "Firefly III"
-version: 0.1
+version: 0.11
 slug: firefly_iii
 description: "Nog geen beschrijving"
 arch:
@@ -24,4 +24,5 @@ schema:
   DB_DATABASE: str
   DB_USERNAME: str
   DB_PASSWORD: password
-
+services:
+  - mysql: needed
