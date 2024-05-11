@@ -1,5 +1,5 @@
 name: "Firefly III"
-version: 0.14
+version: 0.15
 slug: firefly_iii
 description: "Nog geen beschrijving"
 arch:
@@ -9,22 +9,14 @@ ports:
   8080/tcp: 9080
 ports_description:
   80/tcp: Web interface
+map:
+  -share: rw
 options:
   APP_KEY: CHANGEME_32_CHARS
-  #DB_HOST: localhost
-  #DB_CONNECTION: mysql
-  #DB_PORT: 3306
-  #DB_DATABASE: firefly
-  #DB_USERNAME: firelfy
-  #DB_PASSWORD: firefly
+  DEFAULT_LANGUAGE: nl_NL
 schema:
   APP_KEY: str
-  #DB_HOST: str
-  #DB_CONNECTION: list(mysql|pqsql)
-  #DB_PORT: int
-  #DB_DATABASE: str
-  #DB_USERNAME: str
-  #DB_PASSWORD: password
+  DEFAULT_LANGUAGE: match([a-z][a-z]_[A-Z][A-Z])
 services:
   - mysql:need
 hassio_api: true
