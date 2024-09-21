@@ -5,7 +5,7 @@ ARG TZ=Europe/Amsterdam
 
 RUN  echo 'deb http://http.us.debian.org/debian testing main non-free contrib' >> /etc/apt/sources.list &&\
     apt update &&\
-    apt install -y unzip alsa-utils libgdiplus ffmpeg wget
+    apt install -y unzip alsa-utils libgdiplus ffmpeg wget xz-utils
 
 VOLUME ["/data"]
 
