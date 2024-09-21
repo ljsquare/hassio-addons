@@ -1,4 +1,7 @@
 # Changelog
+
+## 0.94
+- Merged pull request for [issue5](https://github.com/ljsquare/hassio-addons/issues/5)
 ## 0.93
 - Solved [issue4](https://github.com/ljsquare/hassio-addons/issues/4)
 ## 0.92
