@@ -5,6 +5,7 @@ apparmor: true
 description: "iSpy is the world’s most popular open source video surveillance application. It's compatible with the the vast majority of consumer webcams and IP cameras."
 arch:
   - amd64
+  - aarch64
 map:
   - share:rw
 url: "https://www.ispyconnect.com/"
