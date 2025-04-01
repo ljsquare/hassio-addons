@@ -38,7 +38,7 @@ RUN \
     libressl \
 	nano \
 	nginx \
-	openssl \
+	#openssl \
 	php81 \
 	php81-curl \
 	php81-fileinfo \
