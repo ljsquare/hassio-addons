@@ -57,7 +57,7 @@ func Start() {
 	})
 	services = append(services, service{
 		Name:        "PHP-fpm8",
-		Executable:  "/usr/sbin/php-fpm81",
+		Executable:  "/usr/sbin/php-fpm84",
 		Parameters:  []string{"-F"},
 		User:        "barcodebuddy",
 		ShowOutput:  false,
