@@ -1,6 +1,6 @@
 ---
 name: Barcode Buddy for Grocy
-version: 1.2
+version: 1.2.1
 slug: bbuddy-grocy
 description: Barcode system for Grocy
 url: https://github.com/ljsquare/hassio/barcodebuddy-homeassistant
