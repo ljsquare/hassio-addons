@@ -26,7 +26,7 @@ COPY root/ /
 
 # install packages
 RUN \
- echo "**** installing os packages ****" && \
+ # echo "**** installing os packages ****" && \
  apk add --no-cache \
 	apache2-utils \
 	bash \
@@ -62,8 +62,8 @@ RUN \
 	screen \
 	shadow \
 	sudo \
-	tzdata && \
- echo 'fastcgi_param  SCRIPT_FILENAME $document_root$fastcgi_script_name;' >> \
+	tzdata # && \
+RUN echo 'fastcgi_param  SCRIPT_FILENAME $document_root$fastcgi_script_name;' >> \
 	/etc/nginx/fastcgi_params && \
  rm -f /etc/nginx/conf.d/default.conf && \
  chown redis:redis /etc/redis.conf && \
