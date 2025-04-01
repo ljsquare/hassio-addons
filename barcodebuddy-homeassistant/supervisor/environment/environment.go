@@ -43,7 +43,7 @@ func parseMain() {
 }
 
 func parseTimezone() {
-	const filePath = "/etc/php81/php.ini"
+	const filePath = "/etc/php84/php.ini"
 	var timezone = os.Getenv("TZ")
 	if timezone == "" {
 		fmt.Println("No timezone specified. To set timezone, set environment variable TZ")
