@@ -26,7 +26,7 @@ COPY root/ /
 
 # install packages
 RUN \
- # echo "**** installing os packages ****" && \
+ echo "**** installing os packages ****" && \
  apk add --no-cache \
 	apache2-utils \
 	bash \
@@ -34,43 +34,42 @@ RUN \
 	coreutils \
 	curl \
 	evtest \
-	#libressl3.7-libssl \
-    libressl \
+    	libressl \
 	nano \
 	nginx \
-	#openssl \
-	php81 \
-	php81-curl \
-	php81-fileinfo \
-	php81-fpm \
-	php81-gettext \
-	php81-json \
-	php81-mbstring \
-	php81-openssl \
-	php81-pdo \
-	php81-pdo_sqlite \
-	php81-redis \
-	php81-session \
-	php81-simplexml \
-	php81-sockets \
-	php81-sqlite3 \
-	php81-xml \
-	php81-xmlwriter \
-	php81-zlib \
+	openssl \
+	php84 \
+	php84-curl \
+	php84-fileinfo \
+	php84-fpm \
+	php84-gettext \
+	php84-json \
+	php84-mbstring \
+	php84-openssl \
+	php84-pdo \
+	php84-pdo_sqlite \
+	php84-redis \
+	php84-session \
+	php84-simplexml \
+	php84-sockets \
+	php84-sqlite3 \
+	php84-xml \
+	php84-xmlwriter \
+	php84-zlib \
 	procps \
 	redis \
 	screen \
 	shadow \
 	sudo \
-	tzdata 
-RUN echo 'fastcgi_param  SCRIPT_FILENAME $document_root$fastcgi_script_name;' >> \
+	tzdata && \
+echo 'fastcgi_param  SCRIPT_FILENAME $document_root$fastcgi_script_name;' >> \
 	/etc/nginx/fastcgi_params && \
  rm -f /etc/nginx/conf.d/default.conf && \
  chown redis:redis /etc/redis.conf && \
  useradd -d /config -s /bin/false barcodebuddy && \
  chmod 755 /etc && \
- chown barcodebuddy:barcodebuddy -R /var/log/php81 && \
- ln -s /usr/bin/php81 /usr/bin/php && \
+ chown barcodebuddy:barcodebuddy -R /var/log/php84 && \
+ ln -s /usr/bin/php84 /usr/bin/php && \
  ln -s /config /data
 
 
@@ -104,7 +103,7 @@ RUN \
    sed -i 's/[[:blank:]]*const[[:blank:]]*IS_DOCKER[[:blank:]]*=[[:blank:]]*false;/const IS_DOCKER = true;/g' /app/bbuddy/config-dist.php && \
  echo "Set disable_coredump false" > /etc/sudo.conf && \
 sed -i 's/SCRIPT_LOCATION=.*/SCRIPT_LOCATION="\/app\/bbuddy\/index.php"/g' /app/bbuddy/example/grabInput.sh && \
- sed -i 's/pm.max_children = 5/pm.max_children = 20/g' /etc/php81/php-fpm.d/www.conf && \
+ sed -i 's/pm.max_children = 5/pm.max_children = 20/g' /etc/php84/php-fpm.d/www.conf && \
 sed -i 's/WWW_USER=.*/WWW_USER="barcodebuddy"/g' /app/bbuddy/example/grabInput.sh && \
 sed -i 's/IS_DOCKER=.*/IS_DOCKER=true/g' /app/bbuddy/example/grabInput.sh && \
 sed -i 's/const DEFAULT_USE_REDIS =.*/const DEFAULT_USE_REDIS = "1";/g' /app/bbuddy/incl/db.inc.php && \
